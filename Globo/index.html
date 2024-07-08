@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafío JS - Crece y explota!</title>
+    <style>
+        #globo {
+            background-color: rgb(80, 185, 255);
+            border-radius: 100px;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            transition: width 1s, height 1s, border-radius 1s;
+        }
+        
+        @keyframes explosion {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <span id="globo"></span>
+    <audio id="explosion-sound" src="/Sonido/explosion.mp3"></audio>
+    <script src="/rxjs.umd.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
